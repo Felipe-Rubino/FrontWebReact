@@ -19,7 +19,7 @@ export const deleteId = async (id) => {
   return api.delete(`/skill/${id}`);
 };
 
-export const deleteUsuarioId = async (usuarioId, skillId) => {
+export const deleteUsuarioId = async(usuarioId, skillId) => {
   return api.delete(`/skill/${usuarioId}/${skillId}`);
 };
 

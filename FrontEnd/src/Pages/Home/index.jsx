@@ -40,9 +40,10 @@ const Home = () => {
     }
   };
 
-  const fetchDeleteUsuarioId = async () => {
+  const fetchDeleteUsuarioId = async (skillId) => {
     const usuarioId = localStorage.getItem("loggedUserId");
-    const id = selectedSkill ? selectedSkill.skillId : null;
+    const id = skillId;
+    
     try {
       const response = await deleteUsuarioId(usuarioId, id);
       console.log(response);
@@ -126,7 +127,7 @@ const Home = () => {
               </div>
               <div className="divdalixeira">
                 <button
-                  onClick={() => fetchDeleteUsuarioId()}
+                  onClick={() => fetchDeleteUsuarioId(s.skillId)}
                   className="botaoexcluir"
                 >
                   <FiTrash2 size={18} color="red" />
