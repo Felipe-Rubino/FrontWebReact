@@ -12,7 +12,7 @@ const Home = () => {
   const [selectedSkill, setSelectedSkill] = useState();
   const [confirmaMessage, setConfirmaMessage] = useState("");
   function onClickSkill(skill) {
-    console.log(skill)
+    console.log(skill);
     setSelectedSkill(skill);
   }
   const openModal = () => {
@@ -22,35 +22,35 @@ const Home = () => {
   const closeModal = () => {
     setIsModalOpen(false);
   };
-  
+
   const fetchNivelSkill = async () => {
     const usuarioId = localStorage.getItem("loggedUserId");
-    console.log(usuarioId)
+    console.log(usuarioId);
     const id = selectedSkill ? selectedSkill.skillId : null;
-    console.log(id)
-    try{
-      const response = await atualizarId(id, levelSkill, usuarioId)
+    console.log(id);
+    try {
+      const response = await atualizarId(id, levelSkill, usuarioId);
       setConfirmaMessage("Nivel de skill atualizada!");
-      setTimeout(() =>{
-        setConfirmaMessage("")
-      }, 2000)
+      setTimeout(() => {
+        setConfirmaMessage("");
+      }, 2000);
       fetchSkill();
-    }catch(error){
-      console.log(error)
+    } catch (error) {
+      console.log(error);
     }
-  }
+  };
 
   const fetchDeleteUsuarioId = async () => {
-    const usuarioId = localStorage.getItem("loggedUserId")
-    const id = selectedSkill ? selectedSkill.skillId : null
-    try{
-      const response = await deleteUsuarioId(usuarioId, id)
-      console.log(response)
-      fetchSkill()
-    }catch(error){
-      console.log(error)
+    const usuarioId = localStorage.getItem("loggedUserId");
+    const id = selectedSkill ? selectedSkill.skillId : null;
+    try {
+      const response = await deleteUsuarioId(usuarioId, id);
+      console.log(response);
+      fetchSkill();
+    } catch (error) {
+      console.log(error);
     }
-  }
+  };
 
   function handleSkill() {
     return (window.location.href = "/skills");
@@ -80,9 +80,9 @@ const Home = () => {
       <Header />
       <p className="tituloHome"> Essas são suas skills!</p>
       <div className="container">
-        <div className="containerModal" >
+        <div className="containerModal">
           {isModalOpen && (
-            <div className="modal-overlay" >
+            <div className="modal-overlay">
               <div className="modal">
                 <button onClick={closeModal} className="botaofechar">
                   <FiXCircle />
@@ -97,9 +97,7 @@ const Home = () => {
                   />
                 </div>
                 <div className="divbotaoconfirmar">
-                  <button onClick={fetchNivelSkill}
-                    className="botaoConfirmar"
-                  >
+                  <button onClick={fetchNivelSkill} className="botaoConfirmar">
                     Confirmar
                   </button>
                 </div>
@@ -109,11 +107,17 @@ const Home = () => {
         </div>
         {skills.map((s) => {
           return (
-            <div className="listaHomeSkills" key={s.skillId} onClick={() => onClickSkill(s)}>
+            <div
+              className="listaHomeSkills"
+              key={s.skillId}
+              onClick={() => onClickSkill(s)}
+            >
               <p className="nomeSkill">{s.nomeSkill}</p>
               <p className="tituloSkill">{s.descricao}</p>
-              <p className="levelSkill">Seu level nessa skill é {s.levelSkill}</p>
-              <div className="divdafoto" >
+              <p className="levelSkill">
+                Seu level nessa skill é {s.levelSkill}
+              </p>
+              <div className="divdafoto">
                 <img
                   className="imagemSkill"
                   width="120px"

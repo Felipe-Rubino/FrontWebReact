@@ -159,7 +159,7 @@
 .modal {
     background-color: white;
     padding: 20px;
-    width: 60%;     
+    width: 60%;
     height: 60%;
     max-width: 600px;
     border-radius: 8px;
@@ -179,23 +179,26 @@
     padding: 5px 10px;
     border-radius: 4px;
     cursor: pointer;
-    background-color: transparent; 
+    background-color: transparent;
     outline: none;
 }
-.dialogTitle{
+
+.dialogTitle {
     margin-bottom: 5px;
 }
-.levelSkill{
+
+.levelSkill {
     font-weight: 700;
     color: #333;
     text-align: center;
     font-family: 'Roboto', sans-serif;
 }
-.confirmaMessage{
+
+.confirmaMessage {
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     color: #333;
     margin-bottom: 4%;
-    
+
 }

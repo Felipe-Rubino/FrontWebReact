@@ -35,8 +35,8 @@ const Skill = () => {
         setCadastroSucesso(true);
       }
       console.log(response);
-    } catch {
-      console.log("deu ruim");
+    } catch (error) {
+      console.log(error);
     }
   };
 

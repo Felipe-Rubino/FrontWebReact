@@ -5,7 +5,7 @@ import React, { useContext } from "react";
 import { useState, useEffect } from "react";
 import { FiEye, FiEyeOff, FiLock, FiMail } from "react-icons/fi";
 import { AuthContext } from "../../Context/auth";
-import Logo from "../../assets/b1_00000.png"
+import Logo from "../../assets/b1_00000.png";
 const Login = ({ setIsLoggedIn }) => {
   const { login, errorLogin } = useContext(AuthContext);
   const [email, setEmail] = useState("");
@@ -16,31 +16,31 @@ const Login = ({ setIsLoggedIn }) => {
   const [loading, setLoading] = useState(false);
   const handleCadastro = () => {
     window.location.href = "/cadastro";
-  };  
+  };
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
 
-  const handleRememberMeChange = (e) =>{
-    setRememberPassword(e.target.checked)
-      if(e.target.checked){
-        localStorage.setItem('rememberedEmail', email)
-        localStorage.setItem('rememberedPassword', password)
-      }else {
-        localStorage.removeItem('rememberedEmail')
-        localStorage.removeItem('rememberedPassword')
-      }
-  }
+  const handleRememberMeChange = (e) => {
+    setRememberPassword(e.target.checked);
+    if (e.target.checked) {
+      localStorage.setItem("rememberedEmail", email);
+      localStorage.setItem("rememberedPassword", password);
+    } else {
+      localStorage.removeItem("rememberedEmail");
+      localStorage.removeItem("rememberedPassword");
+    }
+  };
   useEffect(() => {
-    const rememberedEmail = localStorage.getItem('rememberedEmail')
-    const rememberedPassword = localStorage.getItem('rememberedPassword')
-    if(rememberedEmail){
-      setEmail(rememberedEmail)
+    const rememberedEmail = localStorage.getItem("rememberedEmail");
+    const rememberedPassword = localStorage.getItem("rememberedPassword");
+    if (rememberedEmail) {
+      setEmail(rememberedEmail);
     }
-    if(rememberedPassword){
-      setPassword(rememberedPassword)
+    if (rememberedPassword) {
+      setPassword(rememberedPassword);
     }
-  }, [])
+  }, []);
 
   const botaoCadastro = () => {
     window.location.href = "/cadastro";
@@ -146,10 +146,8 @@ const Login = ({ setIsLoggedIn }) => {
         </div>
         {errorMSG("invalidCredentials")}
         {errorMSG("loginError")}
-        <label className="checkbox"> 
-          <span className="remember">
-            Remember me
-          </span>
+        <label className="checkbox">
+          <span className="remember">Remember me</span>
           <input
             type="checkbox"
             checked={rememberPassword}
@@ -175,7 +173,7 @@ const Login = ({ setIsLoggedIn }) => {
         </a>
       </div>
     </LoginForm>
-  );    
+  );
 };
 
 export default Login;
