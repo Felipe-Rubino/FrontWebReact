@@ -79,7 +79,7 @@ const Cadastro = () => {
           setCadastroSucesso(true);
           setTimeout(() => {
             window.location.href = "/login";
-          }, 3000);
+          }, 2000);
         } else {
           console.log("Erro no cadastro: ", response.error);
         }
