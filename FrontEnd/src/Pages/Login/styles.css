@@ -1,0 +1,165 @@
+.subtitle{
+    color: black;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+  
+}
+.input_container{
+    display: flex;
+    flex-direction: column;
+   
+}
+.input_container input{
+    width: 99%;
+    margin: 1.5rem auto;
+    padding: 1rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    outline: 0;
+    border: 0;
+    border: 2px solid  #3b8ea5;
+    
+    
+}
+.login_butao{
+    display: block;
+    margin:1rem auto;
+    width: 55%;
+    padding: 0.75rem 1rem;
+    border-radius: 25px;
+    outline: 0;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    background-color: #3b8ea5;
+    color: black;
+    border: 2px solid transparent;
+}
+.login_butao:hover{
+    border: 2px solid #3b8ea5;
+    background-color:white;
+    transform: scale(1.15);
+}
+.mensagemerror{
+    color: rgb(231, 64, 64);
+    padding-left: 1rem;
+    font-size: 1.15rem;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+}
+.containerdasenha{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    
+}
+.inputloginsenha + svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    right: 22px;
+    
+}
+input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+.botaocadastro{
+    display: block;
+    margin: 3rem auto;
+    width: 55%;
+    padding: 0.75rem 1rem;
+    border-radius: 25px;
+    outline: 0;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    background-color: #3b8ea5;
+    color: black;
+    border: 2px solid transparent;
+}
+.botaocadastro:hover{
+    border: 2px solid #3b8ea5;
+    background-color:white;
+    transform: scale(1.15);
+}
+.tituloconta{
+    display: flex;
+    justify-content: center;
+    text-align: center;  
+    font-size: 1.05rem;  
+    text-decoration: underline;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    
+}
+.logodologin{
+    width: 25vw;
+    height: 15vh;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+.checkbox{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 3%;
+}
+.remember{
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    padding: 5px;
+}
+@media screen and (max-width: 350px) {
+    .containerdasenha {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .inputsenha {
+      padding-right: 40px;
+    }
+    .inputsenha + svg {
+      margin-top: 10px; 
+    }
+    .logodologin{
+        width: 25vw;
+        height: 10vh;
+        object-fit: fill;
+        
+    }
+@media only screen and (max-width: 620px){
+    .input_container input{
+        width: 100%
+    }
+    .login_butao{
+        width: 100%
+    }
+    .error{
+        padding-left: 0.2rem;
+    }
+    .logodologin{
+        width:25vw;
+        height: 5vh;
+        object-fit: cover;
+        
+    }
+}
+@media only screen and (max-height: 670px){
+    .subtitle{
+        margin-bottom: 2rem;
+    }
+    .logodologin{
+        width:25vw;
+        height: 5vh;
+        
+    }
+
+}
+
+}

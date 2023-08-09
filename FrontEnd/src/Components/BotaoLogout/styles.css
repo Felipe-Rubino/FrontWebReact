@@ -1,0 +1,11 @@
+.botaologout{
+    height: 6vh;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: rgb(41, 41, 41);
+    border: none;
+    background-color:#3b8ea5;
+    font-family:  "Inter", sans-serif;
+    margin-right: 4%;
+}

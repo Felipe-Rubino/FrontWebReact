@@ -1,0 +1,11 @@
+.botaovoltar{
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color:  #3b8ea5;
+    font-size: 36px; 
+    margin-left: 1%;
+    z-index: 10;
+}

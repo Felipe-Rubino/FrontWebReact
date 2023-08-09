@@ -1,0 +1,21 @@
+.headerprincipal{
+    background-color:#3b8ea5;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media(max-width: 768px){
+    justify-content: center;
+  }
+}
+.logodoheader{
+  width: 15vw;
+  height: 20vh;
+  margin-left: 3vw;
+  @media(max-width: 768px){
+    width: 40vw;
+    height: 15vh;
+    align-items: center;
+
+  }
+}

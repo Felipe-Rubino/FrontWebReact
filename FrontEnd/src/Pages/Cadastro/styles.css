@@ -1,0 +1,43 @@
+.tituloCadastro{
+    color: black;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+}
+.containerdasenhaCadastro{
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    
+}
+.inputsenhaCadastro + svg {
+    position: absolute;
+    top: 25%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    right: 20px; 
+}
+.inputsenha + svg{
+    position: absolute;
+    top: 70%;
+    cursor: pointer;
+    right: 21px;
+}
+.mensagemerrorCadastro{
+    color: rgb(231, 64, 64);
+    padding-left: 1rem;
+    font-size: 1.15rem;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+.mensagemSucesso{
+    color: #3b8ea5;
+    padding-left: 1rem;
+    font-size: 1.15rem;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+}
